@@ -23,14 +23,17 @@
 - name: Creating folder strapi1
   file:
     path: /root/strapi1
+    state: directory
 
 - name: Creating folder strapi2
   file:
     path: /root/strapi2
+    state: directory
 
 - name: Creating folder strapi3
   file:
     path: /root/strapi3
+    state: directory
     
 
 - name: Copying template file docker-compose.yaml in strapi1
