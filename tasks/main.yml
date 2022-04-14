@@ -3,7 +3,7 @@
 #
 - name: Installing docker
   package:
-         name: docker.io
+         name: docker-ce
          state: present
 
 - name: Installing docker-compose
@@ -39,17 +39,17 @@
 - name: Copying template file docker-compose.yaml in strapi1
   template:
           src: docker-compose.yaml
-          dest: /root/strapi1
+          dest: /root/strapi1/docker-compose.yaml
 
 - name: Copying template file docker-compose.yaml in strapi2
   template:
           src: docker-compose2.yaml
-          dest: /root/strapi2
+          dest: /root/strapi2/docker-compose.yaml
 
 - name: Copying template file docker-compose.yaml in strapi3
   template:
           src: docker-compose3.yaml
-          dest: /root/strapi3
+          dest: /root/strapi3/docker-compose.yaml
 
 - name: Pulling image
   command: docker-compose pull
